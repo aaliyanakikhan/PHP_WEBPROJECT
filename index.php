@@ -1,286 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce website using php and mysql.</title>
-
-    <!--boortstrap css link-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-     crossorigin="anonymous">
-
-  
-       
-
-         <!-- css file link-->
-            <link rel="stylesheet"  href="./style.css">
-   
-   
-   
-         <!--front awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-     crossorigin="anonymous" 
-     referrerpolicy="no-referrer" />
-    
-      
-    
+<!DOCTYPE html><!--define the document type as html -->
+<html lang="en"><!-- define the cooding language in english  -->
+<head><!-- main heading -->
+    <meta charset="UTF-8"><!-- use to support various symbols & caharcter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ensure web reponsive on all sceen type -->
+    <title>Online Perfume store</title><!-- title of website -->
+    <link rel="stylesheet" href="styles/styles.css"><!-- connects the css external file -->
 </head>
 <body>
-    <!--<h1>Neo perfumes</h1>-->
-    <!--navbar-->
+    <!--navigation bar -->
+    <nav class="nav-bar"> <!--creates the navigation bar -->
+        <a id = "logo" href="#">NEO</a><!-- define the logo text neo that link homepage  -->
+        <div class="nav-bar-links"><!--contain navigation links and buttons  -->
+            <ul><!--creates an unorder list for menu items-->
+            <li><a href="#">Home</a></li><!-- define menu link to home  -->
+            <li><a href="#">Products</a></li><!-- define menu link to product -->
+            <li><a href="#">Services</a></li><!-- define menu link to services-->
+            <li><a href="#">Contact Us</a></li><!-- define menu link to contact us -->
+        </ul><!-- end -->
+        <button id="button1" class="button-style">Order Now</button></div> <!--button for ordering product-->
+    </nav>
+    <!-- end -->
 
-    <div class="container-fluid p-0">
-        <!--first child   -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--info for blue color panel-->
-  <div class="container-fluid">
-    <img src="./images/neopurple2.jpg" alt=""  class="logo"> 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
-        </li>
-        <!--the commented code is for more enhance ment  currently skipping because to make simple 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
-        </li>
+    <!-- for mobile application currently skipping   
+    <nav class="nav-bar-responsive">
+        <a id = "logo" href="#">Essence</a>
+        <div class="nav-bar-links">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+        </div>
+    </nav>-->
+    
+    <div class="container-1"><!-- main intro section -->
+        <div class="container-text"><!---->
+            <h1 class="large-text">We care about Fragrances</h1><!-- text heading for container-->
+            <p>Where modern elegance meets boundless spirit. Crafted for those who embrace the now and shape the future,
+                 NEO fragrances are a symphony of unexpected notes,
+                  designed to ignite your senses and leave an unforgettable impression.
+                 Step into a world of contemporary sophistication.</p> <!-- paragraph text -->
+            <button id="button2" class="button-style">See more</button><!-- button for see more -->
+        </div>
+        <div id="image-container-1"><!-- place holder for an image --> 
+            <!-- <img src="images/first-image.png" alt="image"> skip image bcoz i have better preference -->
+        </div>
+    </div>
       
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cart  <i class="fa fa-shopping-cart" aria-hidden="true"></i><sup>1</sup></a>
-        </li>
 
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#">Total Price</a>
-        </li>
-  
-
-
-    
-
-
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Explore" aria-label="Explore">
-        <button class="btn btn-outline-info" type="submit">Search</button>
-      </form>
+     <!-- brand into section-->
+    <div class="container-2"> <!--2 conatiner for customer to why choose neo perfumes --> 
+        <div class="slogan"><!--slogan is a css class that helps to customize the container according to css rule-->
+            <h1 class="large-text">NEO</h1><!-- heading -->
+            <p>Luxury Defined. One Drop at a Time.</p><!-- para -->
+        </div>
+        <div>
+            <img src="images/second-image.jpg" alt=""><!-- use the image with link -->
+        </div>
+        <div class="container-text"><!-- conatiner to print text-->
+            <h2 class="big-text">Why shop with Neo</h2><!-- heading -->
+            <p>Distinctive Scents: Discover expertly crafted perfumes using high-quality ingredients,
+                 designed to express your individuality.
+                Modern Elegance: NEO offers contemporary sophistication, 
+                staying ahead of fragrance trends.
+                Lasting Impressions: Experience fragrances that linger, leaving a memorable mark.</p><!--para-->
+            <button id="button3" class="button-style">Read More</button> <!--button for read more  -->
+        </div>
     </div>
-  </div>
-</nav>
-<!-- second child -->
- <nav class= "navabar navbar-expand-lg navabar-dark bg-light ">
-<u1 class="navbar-nav me-auto">
-
-<li class="nav-item">
-          <a class="nav-link" href="#">Welcome Guest</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#">Log-in</a>
-        </li>
-
-        </u1>
- </new>
-
-<!-- third child -->
-
-<div class="bg-light">
-  <h3 class="text-center">Neo Perfumes</h3>
-  <p class="text-center">Enhancing the Experiance
-
-  </p>
-
-</div>
-
-<!-- forth child-->
- <div class="row">
-<div class="col-md-10">
-  <P1>    EXPLORE THE LUXURY of FEMINE</P1>
-
-
-  <!-- product-->
-   <div class="row">
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img src="./images/Elysianserrenade.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-INFO">Add To Card</a>
-    <a href="#" class="btn btn-secondary">View More </a>
-  </div>
-</div>
+      <!--display service -->
+    <div class="container-3"><!-- conatiner for service -->
+        <h1 class="large-text">Our Services</h1><!-- heading -->
+        <div class="container-3-services">
+            <div> <!-- container for recommend-->
+                <img src="logos/recommendation.png" alt=""><!-- image connect with link -->
+                <h2>Recommendations</h2><!-- heading -->
+                <p>Noir Celestial Whisper is a captivating fragrance that weaves a tapestry of warm,
+                     spicy notes with the deep allure of dark woods.
+                      It evokes a sense of mystery and sophisticated elegance,
+                       making it ideal for evening wear or special occasions.</p> <!-- para -->
+            </div>
+            <div> <!-- conatiner for gifting  -->
+                <img src="logos/giftbox.png" alt=""> 
+                <h2>Gifting</h2>
+                <p>Gifting NEO perfumes transcends a simple present; it's a gesture of refined taste and personal connection with their modern and distinctive scents, offer a unique olfactory experience Consider NEO for birthdays, anniversaries.</p>
+            </div>
+            <div> <!-- conatiner for refills section -->
+                <img src="logos/perfume-spray.png" alt="">
+                <h2>Refills</h2>
+                <p>Extend your favorite scent with our eco-conscious refills. Enjoy the same premium fragrance, reduce waste, and embrace responsible elegance. Simple, efficient, and a conscious choice for the modern connoisseur.</p>
+            </div>
+            <div> <!-- container for returns -->
+                <img src="logos/refund.png" alt="">
+                <h2>Returns</h2>
+                <p>NEO's return policy prioritizes your satisfaction. Enjoy a hassle-free return within 5 days for unopened products. We ensure a reflecting our commitment to quality and customer trust. Experience NEO risk-free.</p>
+            </div>
+        </div>
     </div>
-<div class="col-md-4 mb-2"> 
-      <div class="card" ><!-- style="width: 18rem;"-->
-  <img src="./images/midnightenchantment.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-INFO">Add To Card</a>
-    <a href="#" class="btn btn-secondary">View More </a> 
-  </div>
-</div>
-</div>
-    <div class="col-md-4 mb-2 ">
-    <div class="card" > <!--style="width: 18rem;"-->
-  <img src="./images/CELESTIALWHISPER.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-INFO">Add To Card</a>
-    <a href="#" class="btn btn-secondary">View More </a>
-  </div>
-</div>
+     <!-- product section -->
+    <div class="container-4"><!-- conatainer for product -->
+        <h1 class="big-text">Our products</h1><!-- heading -->
+        <p>explore the execellence of our product</p><!-- para-->
+        <div>
+            <ul><!-- list of product categories-->
+                <li><a href="#">Floral</a></li><!-- floral perfume options -->
+                <li><a href="#">Woody</a></li><!-- woody perfume options -->
+                <li><a href="#">Fruity</a></li><!-- fruity perfume options -->
+                <li><a href="#">Fresh</a></li><!-- fresh perfume options -->
+        </ul>
     </div>
-    <P2>     EXPLORE THE LUXURY of MASCULINE</P2>
 
-   <div class="col-md-4">
-    <div class="card">
-  <img src="./images/imperialechelon.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-INFO">Add To Card</a>
-    <a href="#" class="btn btn-secondary">View More </a>
-  </div>
-    
+    <div class="container-4-collection">
+        <img src="images/image101.jpeg" alt="">
+       <img src="images/image102.jpeg" alt="">
+        <img src="images/image103.jpeg" alt="">
+        <img src="images/image104.jpeg" alt="">
+        <img src="images/image105.jpeg" alt="">
+        <img src="images/image106.jpeg" alt="">
     </div>
-   </div> 
-   <div class="col-md-4">
-    <div class="card" > <!--style="width: 18rem;"-->
-  <img src="./images/noirvanguard.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-INFO">Add To Card</a>
-    <a href="#" class="btn btn-secondary">View More </a>
-  </div>
-</div>
     </div>
-    
-    <div class="col-md-4">
-    <div class="card" > <!--style="width: 18rem;"-->
-  <img src="./images/mystichorizon.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-INFO">Add To Card</a>
-    <a href="#" class="btn btn-secondary">View More </a>
-  </div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-<!-- sidenav-->
-
-
-<!--<div class="col-md-2 bg-light-lavender p-0">  code for light purple -->     
-<div class="col-md-2 bg-dark-royal-purple p-0">                   
-  <ul class="navbar-nav me-auto text-center">
-    <li class="nav-item bg-INFO">
-      <a href="#" class="nav-link text-light">
-        <h4>Our Products</h4>
-      </a>
-      <ul>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Body Mist</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Eau De Toilette</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Eau De Parfum</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Cologne</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Body Lotion</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Essential Oils</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Hair Mist</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Diffusers</a>
-        </li>
-        <li class="nav-item bg-INFO">
-          <a href="#" class="nav-link text-light">Perfume Oil</a>
-        </li>
-      </ul>
-<!--categary to be displayed -->
-     <ul class="navabar-nav me-auto text-center">
-      <li class= "nav-item bg-INFO">
-        <a href= "#" class="nav-link text-light">Female</a>
-     </li> 
-     <li class= "nav-item bg-INFO">
-        <a href= "#" class="nav-link text-light">male</a>
-     </li> 
-     <!--
-     <li class= "nav-item bg-INFO">
-        <a href= "#" class="nav-link text-light">categori3</a>
-     </li> 
-     <li class= "nav-item bg-INFO">
-        <a href= "#" class="nav-link text-light">categori4</a>
-     </li> 
--->
-  </ul>
-</div>
-</div>
-
-
-
-
-
-
-
-<!-- last child -->
-<div class="bg-light p-3 text-center">
- <p>All Right Are Reserved Design by  Aaliya-Designer Orange pie 2024</p>
-
-</div>
-</div>
-
-
-
-
-
-<!--boortstrap js link -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
- integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
- crossorigin="anonymous"></script>
-
+    <!-- footer is used to stoore the details of footer info have smae func and div but purpose is different-->
+    <footer id="footer">  <!-- opening of footer tag also id= footer is unique attribute that define this footer element-->
+        <div>
+            <h1 class="big-text">NEO</h1> <!-- heading -->
+            <p>NEO: Modern Fragrance. © 2025 NEO. All Rights Reserved. 
+                Privacy Policy | Terms of Service | Contact Us.
+                 Discover our curated collections and experience lasting impressions.
+                  Follow us on social media for exclusive updates and offer</p><!-- para -->
+            <p>&copy; 2025 NEO - All rights Reserved</p>
+            
+        </div>
+        <div> <!-- conatainer  for social media and timing -->
+            <h2 class="big-text">Opening Times</h2>
+            <p>Monday: Friday: 10.00 - 23.00 
+                <br>
+                Saturday: 10.00 - 19.00</p>
+                <div id="social-logos">
+                    <img src="logos/facebook.png" alt="">
+                    <img src="logos/instagram.png" alt="">
+                    <img src="logos/twitter.png" alt="">
+                    <img src="logos/pinterest.png" alt="">
+                </div>
+        </div>
+        <div>
+            <h2 class="big-text">Contact Us </h2>
+            <p>Tel: (+91) 9136731584</p>               
+            <p>Email: info@neo.com</p>             
+            <p>Address: Vasai Hill Road, Mumbai, India</p>
+                
+        </div>
+    </footer>
+      <!-- source link for js file -->
+    <script src="script.js"></script>
 </body>
 </html>
